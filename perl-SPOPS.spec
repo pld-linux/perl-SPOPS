@@ -15,10 +15,13 @@ Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}
 # Source0-md5:	3c330680f9daf71e2e73e87904591951
 BuildRequires:	perl-devel >= 5.6
 %if %{with tests}
+BuildRequires:	perl-Class-Accessor >= 0.17
 BuildRequires:	perl-Class-Date >= 1.00
 BuildRequires:	perl-Class-ISA >= 0.32
 BuildRequires:	perl-Class-Factory >= 1.00
 BuildRequires:	perl-Devel-StackTrace >= 0.90
+BuildRequires:	perl-Log-Dispatch >= 2
+BuildRequires:	perl-Log-Log4perl >= 0.35
 BuildRequires:	perl-Storable >= 1.00
 BuildRequires:	perl-Time-Piece >= 1.07
 %endif
