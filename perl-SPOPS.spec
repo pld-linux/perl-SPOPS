@@ -1,14 +1,32 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pnam	SPOPS
 Summary:	Simple Perl Object Persistence with Security
-Name:		perl-%{pnam}
-Version:	0.71
-Release:	0.1
-License:	GPL/Artistic
+Name:		perl-SPOPS
+Version:	0.75
+Release:	1
+License:	GPLv2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+%if %{!?_without_tests:1}0
+BuildRequires:	perl-Class-Date >= 1.00
+BuildRequires:	perl-Class-ISA >= 0.32
+BuildRequires:	perl-Class-Factory >= 1.00
+BuildRequires:	perl-Devel-StackTrace >= 0.90
+BuildRequires:	perl-Storable >= 1.00
+BuildRequires:	perl-Time-Piece >= 1.07
+%endif
+Requires:	perl-Class-Date >= 1.00
+Requires:	perl-Class-ISA >= 0.32
+Requires:	perl-Class-Factory >= 1.00
+Requires:	perl-Devel-StackTrace >= 0.90
+Requires:	perl-Storable >= 1.00
+Requires:	perl-Time-Piece >= 1.07
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,7 +42,8 @@ any storage mechanism for accomplishing these tasks.
 %build
 perl Makefile.PL
 %{__make}
-%{__make} test
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -36,7 +55,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Change*
-%{perl_sitelib}/%{pnam}
-%{perl_sitelib}/%{pnam}.pm
+%doc Changes README RELEASE
+%dir %{perl_sitelib}/SPOPS
+%{perl_sitelib}/SPOPS/[!M]*
+%{perl_sitelib}/SPOPS.pm
 %{_mandir}/man3/*
