@@ -7,12 +7,12 @@
 Summary:	Simple Perl Object Persistence with Security
 Name:		perl-SPOPS
 Version:	0.75
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{!?_without_tests:1}0
 BuildRequires:	perl-Class-Date >= 1.00
 BuildRequires:	perl-Class-ISA >= 0.32
@@ -40,7 +40,8 @@ any storage mechanism for accomplishing these tasks.
 %setup -q -n %{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -56,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README RELEASE
-%dir %{perl_sitelib}/SPOPS
-%{perl_sitelib}/SPOPS/[!M]*
-%{perl_sitelib}/SPOPS.pm
+%dir %{perl_vendorlib}/SPOPS
+%{perl_vendorlib}/SPOPS/[!M]*
+%{perl_vendorlib}/SPOPS.pm
 %{_mandir}/man3/*
