@@ -8,7 +8,7 @@ Summary:	Simple Perl Object Persistence with Security
 Summary(pl):	Simple Perl Object Persistence with Security - bezpieczne zachowywanie obiektów
 Name:		perl-SPOPS
 Version:	0.87
-Release:	2
+Release:	3
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
@@ -30,6 +30,7 @@ Requires:	perl-Class-Date >= 1.00
 Requires:	perl-Class-ISA >= 0.32
 Requires:	perl-Class-Factory >= 1.00
 Requires:	perl-Devel-StackTrace >= 0.90
+Requires:	perl-GDBM_File
 Requires:	perl-Time-Piece >= 1.07
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
