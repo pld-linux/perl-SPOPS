@@ -12,7 +12,7 @@ Release:	3
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl-devel >= 5.6
 %if %{!?_without_tests:1}0
 BuildRequires:	perl-Class-Date >= 1.00
 BuildRequires:	perl-Class-ISA >= 0.32
