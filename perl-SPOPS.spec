@@ -11,7 +11,7 @@ Version:	0.87
 Release:	3
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
 # Source0-md5:	22bdc965f05167b31b97772fd8a72b27
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
