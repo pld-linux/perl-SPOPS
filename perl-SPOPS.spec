@@ -17,12 +17,13 @@ BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Class-Accessor >= 0.17
 BuildRequires:	perl-Class-Date >= 1.00
-BuildRequires:	perl-Class-ISA >= 0.32
 BuildRequires:	perl-Class-Factory >= 1.00
+BuildRequires:	perl-Class-ISA >= 0.32
 BuildRequires:	perl-Devel-StackTrace >= 0.90
 BuildRequires:	perl-Log-Dispatch >= 2
 BuildRequires:	perl-Log-Log4perl >= 0.35
 BuildRequires:	perl-Storable >= 1.00
+BuildRequires:	perl-Test-Simple >= 0.41
 BuildRequires:	perl-Time-Piece >= 1.07
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
