@@ -7,12 +7,12 @@
 Summary:	Simple Perl Object Persistence with Security
 Summary(pl):	Simple Perl Object Persistence with Security - bezpieczne zachowywanie obiektów
 Name:		perl-SPOPS
-Version:	0.83
-Release:	2
+Version:	0.85
+Release:	1
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
-# Source0-md5:	3c330680f9daf71e2e73e87904591951
+# Source0-md5:	3f1ee024a5e1c962fadb190640185b0c
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Class-Accessor >= 0.17
