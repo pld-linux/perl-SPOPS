@@ -5,14 +5,14 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pnam	SPOPS
 Summary:	Simple Perl Object Persistence with Security
+Summary(pl):	Simple Perl Object Persistence with Security - bezpieczne zachowywanie obiektów
 Name:		perl-SPOPS
 Version:	0.75
 Release:	2
-License:	GPLv2+ or Artistic
+License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{!?_without_tests:1}0
 BuildRequires:	perl-Class-Date >= 1.00
 BuildRequires:	perl-Class-ISA >= 0.32
@@ -21,6 +21,7 @@ BuildRequires:	perl-Devel-StackTrace >= 0.90
 BuildRequires:	perl-Storable >= 1.00
 BuildRequires:	perl-Time-Piece >= 1.07
 %endif
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Class-Date >= 1.00
 Requires:	perl-Class-ISA >= 0.32
 Requires:	perl-Class-Factory >= 1.00
@@ -35,6 +36,13 @@ SPOPS allows you to easily define how an object is composed and save,
 retrieve or remove it any time thereafter. It is intended for SQL
 databases (using the DBI), but you should be able to adapt it to use
 any storage mechanism for accomplishing these tasks.
+
+%description -l pl
+SPOPS pozwala na ³atwe definiowanie, jak obiekt jest sk³adany i
+zachowywany, odtwarzany lub usuwany pó¼niej w dowolnej chwili. Jest
+przeznaczony do baz danych SQL (przy u¿yciu DBI), ale powinien daæ
+siê zaadaptowaæ do u¿ywania z dowolnym mechanizmem przechowywania
+danych.
 
 %prep
 %setup -q -n %{pnam}-%{version}
