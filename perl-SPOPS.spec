@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	SPOPS
 Summary:	Simple Perl Object Persistence with Security
-Summary(pl):	Simple Perl Object Persistence with Security - bezpieczne zachowywanie obiektów
+Summary(pl.UTF-8):   Simple Perl Object Persistence with Security - bezpieczne zachowywanie obiektÃ³w
 Name:		perl-SPOPS
 Version:	0.87
 Release:	3
@@ -41,11 +41,11 @@ retrieve or remove it any time thereafter. It is intended for SQL
 databases (using the DBI), but you should be able to adapt it to use
 any storage mechanism for accomplishing these tasks.
 
-%description -l pl
-SPOPS pozwala na ³atwe definiowanie, jak obiekt jest sk³adany i
-zachowywany, odtwarzany lub usuwany pó¼niej w dowolnej chwili. Jest
-przeznaczony do baz danych SQL (przy u¿yciu DBI), ale powinien daæ
-siê zaadaptowaæ do u¿ywania z dowolnym mechanizmem przechowywania
+%description -l pl.UTF-8
+SPOPS pozwala na Å‚atwe definiowanie, jak obiekt jest skÅ‚adany i
+zachowywany, odtwarzany lub usuwany pÃ³Åºniej w dowolnej chwili. Jest
+przeznaczony do baz danych SQL (przy uÅ¼yciu DBI), ale powinien daÄ‡
+siÄ™ zaadaptowaÄ‡ do uÅ¼ywania z dowolnym mechanizmem przechowywania
 danych.
 
 %prep
