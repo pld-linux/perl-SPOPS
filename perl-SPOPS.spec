@@ -1,9 +1,9 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pnam	SPOPS
+%include	/usr/lib/rpm/macros.perl
 Summary:	Simple Perl Object Persistence with Security
 Summary(pl.UTF-8):	Simple Perl Object Persistence with Security - bezpieczne zachowywanie obiektów
 Name:		perl-SPOPS
@@ -13,7 +13,9 @@ License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/C/CW/CWINTERS/%{pnam}-%{version}.tar.gz
 # Source0-md5:	22bdc965f05167b31b97772fd8a72b27
+URL:		http://search.cpan.org/dist/SPOPS/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-Accessor >= 0.17
 BuildRequires:	perl-Class-Date >= 1.00
@@ -25,10 +27,9 @@ BuildRequires:	perl-Log-Log4perl >= 0.35
 BuildRequires:	perl-Test-Simple >= 0.41
 BuildRequires:	perl-Time-Piece >= 1.07
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Class-Date >= 1.00
-Requires:	perl-Class-ISA >= 0.32
 Requires:	perl-Class-Factory >= 1.00
+Requires:	perl-Class-ISA >= 0.32
 Requires:	perl-Devel-StackTrace >= 0.90
 Requires:	perl-GDBM_File
 Requires:	perl-Time-Piece >= 1.07
@@ -44,9 +45,8 @@ any storage mechanism for accomplishing these tasks.
 %description -l pl.UTF-8
 SPOPS pozwala na łatwe definiowanie, jak obiekt jest składany i
 zachowywany, odtwarzany lub usuwany później w dowolnej chwili. Jest
-przeznaczony do baz danych SQL (przy użyciu DBI), ale powinien dać
-się zaadaptować do używania z dowolnym mechanizmem przechowywania
-danych.
+przeznaczony do baz danych SQL (przy użyciu DBI), ale powinien dać się
+zaadaptować do używania z dowolnym mechanizmem przechowywania danych.
 
 %prep
 %setup -q -n %{pnam}-%{version}
