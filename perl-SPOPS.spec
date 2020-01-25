@@ -3,7 +3,6 @@
 %bcond_without	tests	# do not perform "make test"
 
 %define		pnam	SPOPS
-%include	/usr/lib/rpm/macros.perl
 Summary:	Simple Perl Object Persistence with Security
 Summary(pl.UTF-8):	Simple Perl Object Persistence with Security - bezpieczne zachowywanie obiektów
 Name:		perl-SPOPS
